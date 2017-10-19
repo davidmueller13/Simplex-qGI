@@ -1,0 +1,40 @@
+SIMPLEX is an shader built form Blender Cycles nodes to mimic Global Illumination and acts in part as a biased renderer.
+This is early version of it that needs improvement - but it works, and works fine!
+
+This shader uses Cycles AO shader for Diffuse Ray.
+It helps to make brighter scene with less noise - very similar to the biased renderers.
+
+- Render time has been reduced by 25%.
+- Rendering need less samples to look noiseless
+- quasi-GI gives nice lighting to the interior scene
+
+
+Shader BIASED options:
+BIASED RENDERING - turning the qGI on
+It should be in the position 0 or 1. Otherwise render time can be longer than normal no-qGI Cycles.
+Value 0 = no qGI - works like typical Cycles
+Value 1 = qGI is on and AO Shader makes some nice mess in Diffuse channel :)
+This option works for current material only, but can be override by interal shader value "GLOBAL GI BIASED RENDERING ENABLER"
+
+BIASED GI Mat. Brigthness - sets how bright GI will be 
+( it is related with internal shader value "GLOBAL GI Brigthness DELTA" that is set to -0.35 by default)
+
+BIASED Diffuse Separation - show only Diffuse Ray rendering
+This option is usefull for setting material Diffuse channel on first state of noisy rendering.
+It separates Diffuse ray from any other ray that that could add noise to the surface.
+
+BIASED Resaturator - makes colors saturataion bit nicer when qGI is enabled
+
+
+Shader Internal Values:
+"GLOBAL GI BIASED RENDERING ENABLER" - overrides BIASED RENDERING option for all materials that use SIMPLEX shader
+
+"GLOBAL GI Brigthness DELTA" - sets default value of qGI brightness
+
+"GLOBAL Diffuse Separation OVERRIDE" - sets BIASED Diffuse Separation option active for all materials that use SIMPLEX shader
+
+
+
+
+
+
