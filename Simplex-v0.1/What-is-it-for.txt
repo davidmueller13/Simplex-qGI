@@ -1,4 +1,4 @@
-SIMPLEX is an shader built form Blender Cycles nodes to mimic Global Illumination and acts in part as a biased renderer.
+SIMPLEX is an shader built form Blender 2.79 Cycles nodes to mimic Global Illumination and acts in part as a biased renderer.
 This is early version of it that needs improvement - but it works, and works fine!
 
 This shader uses Cycles AO shader for Diffuse Ray.
