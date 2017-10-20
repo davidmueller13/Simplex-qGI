@@ -35,7 +35,8 @@ Shader Internal Values:
 So you can see the colors and textures with AO shading without reflections.
 TIP: If you override this value to 0.50 you can have very fast preview with partial reflective shading.
 It gives you very low noise on all surfaces that uses SIMPLEX material. 
-But remember that all shiny surfaces and metals has more diffuse color ( glossy is lowered, cause only 0.25 reflection rays are propagated ). But it is fast as hell - good for modelling and some light works.
+But remember that all shiny surfaces and metals has more diffuse color ( glossy is lowered, cause only 0.25 reflection rays are propagated ). 
+But it is fast - good for modelling and some light works.
 
 
 
