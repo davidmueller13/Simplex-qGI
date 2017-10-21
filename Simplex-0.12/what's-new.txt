@@ -1,0 +1,12 @@
+
+1) Added: Normal input
+
+2) Added: Clay render GLOBAL MATERIAL VALUE
+
+3) Moved: GLOBAL VALUES moved from SHADER to SHELL group
+
+4) Fixed: small mistakes in scene
+
+5) Changed: Material names prefix to SX-
+
+
